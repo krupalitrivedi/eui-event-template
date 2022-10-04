@@ -1,4 +1,3 @@
-# Readme
 ## Happy Hacktoberfest!!
 
 _I remember my first Hacktoberfest so clearly because I was so intimidated by Git and contributing code to other repos, and I was still VERY early in my coding journey and didn't even know how to code, but enjoyed the experience so much!_
@@ -11,33 +10,33 @@ Want to participate in [Hacktoberfest](https://hacktoberfest.com/)? All you have
 
 # React + Eui Template for An Event Website
 
-This is a template for an event based website. It started as a website I created for an event my ERG is hosting ([Rainbow Stack Summit](https://www.rainbowstacksummit.com/)), but I decided to make it it's own repo so others can contribute to it and use as well!
+This is a template for an event based website. The website was created for an event my ERG is hosting ([Rainbow Stack Summit](https://www.rainbowstacksummit.com/)), but I decided to make its repository so others could contribute to it and use it as well!
 
-This is all very much WIP, so if you have any comments or ideas, or want to contribute, feel free to create an issue.
+This is all very much Work In Progress, so if you have any comments or ideas, or want to contribute, feel free to create an issue.
 
 ## Demo
 
-View a live demo of the site hosted on Vercel!
-https://eui-event.vercel.app/
+View a live demo of the site hosted on [Vercel](https://eui-event.vercel.app/)
 
 ## Running Locally
 
-- Clone this repo (select "use this template" at the top)
-- Cd to the repo on your local machine
-- Run `yarn install`
-- Run `yarn start dev` to start it up!
+- Fork the project
+- Clone the project by running `git clone https://github.com/<your-username>/eui-event-template.git`
+- Cd to the repo on your local machine - `cd eui-event-template`
+- Install dependencies by - Run `yarn install`
+- Run `yarn start dev` to start the project
 - Go to localhost:3000 in your browser to view it!
 
 ## Connect Google Sheets with your app
 
 Follow these steps to connect your google sheets file with the app.
 
-### 1. Create a google sheet
-
-#### 1. Go to https://docs.google.com/ and create a blank sheet
-#### 2. Add name, title, team, location, shortBio, pronouns, imageLink headers in the sheet (make sure the order of headers is same as in the example sheet provided below).
-#### 3. Populate the sheet with some data.
-##### Data Schema
+- **Create a google sheet**
+ 1. Go to https://docs.google.com/ and create a blank sheet
+ 2. Add name, title, team, location, shortBio, pronouns, imageLink headers in the sheet (make sure the order of headers is same as in the example sheet provided below).
+ 3. Populate the sheet with some data.
+    ``` 
+    Data Schema
     name : string
     title: string
     team: string
@@ -45,21 +44,26 @@ Follow these steps to connect your google sheets file with the app.
     shortBio: string
     pronouns: string
     imageLink: string (url of hosted image)
-#### 4. Change the sheet name to "Speakers" (Sheet name "Speakers" is case sensitive).
+    ```
+  4. Change the sheet name to "Speakers" (Sheet name "Speakers" is case sensitive).
+  <br>
 
 ![](https://i.postimg.cc/MGPDVgkF/Sheet-Demo.jpg)
-### Example sheet 
+
+**Example sheet**: 
 https://docs.google.com/spreadsheets/d/1XgyHXaReTZ3Nq_r7QS18GDvqK_ht010QqnI6PXAnePA/edit?usp=sharing
 
+<br>
 
-### 2. Deploy App Script Web App
+- **Deploy App Script Web App**
+ 1. Open your google sheet.
+ 2. Click on Extensions tab.
+ 3. Click on App Script. 
 
-#### 1. Open your google sheet.
-#### 2. Click on Extensions tab.
-#### 3. Click on App Script.
+
 ![](https://i.postimg.cc/x8BPkmzp/App-Script.jpg)
-#### 4. Delete all the code from the editor (inside Code.gs file).
-####
+ 4. Delete all the code from the editor (inside Code.gs file).
+```
         function doGet(req) {
             if(req.parameters.sheetName == "Speakers") {
                 return getSpeakersData()
@@ -88,11 +92,15 @@ https://docs.google.com/spreadsheets/d/1XgyHXaReTZ3Nq_r7QS18GDvqK_ht010QqnI6PXAn
             return ContentService.createTextOutput(JSON.stringify({speakers: output})).setMimeType(ContentService.MimeType.JSON)
         }
         
-#### 5. Paste above code in the Code.gs file.
-#### 6. Click on Deploy button and select New Deployment.
+ ```
+        
+5. Paste above code in the Code.gs file.
+6. Click on Deploy button and select New Deployment. 
+
 ![](https://i.postimg.cc/43DGfL8r/New-deployment.jpg)
 
-#### 7. Click on settings icon on select type menu and select web app.
+7. Click on settings icon on select type menu and select web app. 
+
 ![](https://i.postimg.cc/jjW3jRmj/Deployment-settings.jpg)
 
 #### 8. Add Description.
