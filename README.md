@@ -103,20 +103,22 @@ https://docs.google.com/spreadsheets/d/1XgyHXaReTZ3Nq_r7QS18GDvqK_ht010QqnI6PXAn
 
 ![](https://i.postimg.cc/jjW3jRmj/Deployment-settings.jpg)
 
-#### 8. Add Description.
-#### 9. Select Anyone in who has access section and click deploy.
-#### 10. Authorize access. 
-##### Google might say it's an unverified app and tell you to go back to safety its because the app that you are creating will have access to your sheet data but since you are developing the application so essentially you are accessing your data only, which is totally safe. 
-#### 11. Copy the Web URL.
-##### Make sure you **do not share the Web URL** with anyone else because if you do so then that person can access your data.
+8. Add Description.
+9. Select Anyone in who has access section and click deploy.
+10. Authorize access. 
+ Google might say it's an unverified app and tell you to go back to safety its because the app that you are creating will have access to your sheet data but since you are developing the application so essentially you are accessing your data only, which is totally safe. 
+11. Copy the Web URL.
+ Make sure you **do not share the Web URL** with anyone else because if you do so then that person can access your data.
 ![](https://i.postimg.cc/1Xzq937C/Copy-url.jpg)
 
-### 3. Configure local project
+- **Configure local project**
 
-#### 1. Open project folder, go to src/utilities/env.js
-#### 2. Replace the string webAppUrl with the Web URL you copied.
+1. Open project folder, go to src/utilities/env.js
+2. Replace the string webAppUrl with the Web URL you copied.
+
 ![](https://i.postimg.cc/9fJXcY32/Env-file.jpg)
-#### 3. Refresh the speakers page to see the results.
+
+3. Refresh the speakers page to see the results.
 
 ## Contributing
 
